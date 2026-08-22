@@ -1,0 +1,44 @@
+
+	
+
+.header{
+		width:95%;
+		height:140px;
+		border: 1px solid #000;
+		padding:10px 5px 10px 30px;
+		background-color: #123875;
+		color:white;
+	}
+
+
+.box-design{
+		width:450px;
+		height:100px;
+		border:0px solid #000;
+		margin:20px;
+		float:left;
+	}
+.menu{
+	width:600px;
+	height140px;
+	padding:40px 100px;
+	border:0px solid #000;
+	margin:20px;
+	float:left;
+}
+
+	
+.logo h1 {
+    font-size: 40px;
+	}
+.logo p{
+	font-size:19px;
+
+}
+
+#dummy_para{
+		color:red;
+	}
+.right{
+	float:right;
+	}
