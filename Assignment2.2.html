@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <title>portfolio</title>
+
+      <style> 
+#header {
+    height: 120px;
+    background-color: #20497a;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 60px;
+}
+
+.logo h{
+    font-size:30px;
+}
+.logo p{
+    font-size:18px;
+}
+.menu a{
+    color:white;
+    margin-left:30px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.menu a:hover {
+    color: yellow;
+}
+#home{
+    height:320px;
+    background-color: #eef6ff;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    padding: 20px 15%;
+}
+.home-text{
+    width:50%;
+}
+.home-text h1{
+    color:black;
+    font-size:39px;
+}
+.home-text h2{
+    color:#1761b8;
+    font-size:38px;
+}
+.home-text p{
+    font-size:17px;
+    line-height:1.5;   
+}
+button {
+    background-color: #0b2545;
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1761b8;
+}
+.home-image img{
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 0 10px gray;
+
+    object-fit: cover;
+}
+
+
+#information {
+    display: flex;
+
+    gap: 40px;
+
+    padding: 30px 12%;
+}
+
+
+/* About */
+
+.about {
+    width: 30%;
+}
+
+.about h2,
+.skills h2,
+.education h2,
+.projects h2,
+.contact h2,
+.social h2 {
+    color: #0b2545;
+
+    margin-bottom: 15px;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+
+/* Skills */
+
+.skills {
+    width: 20%;
+}
+
+.skills ul {
+    padding-left: 20px;
+}
+
+.skills li {
+    margin-bottom: 8px;
+}
+
+
+/* Education */
+
+.education {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.bottom {
+    display: flex;
+
+    gap: 40px;
+
+    margin-top: 40px;
+}
+.projects{
+    width:60%;
+}
+
+.project-container{
+    display: flex;
+
+    gap: 15px;
+}
+
+.project {
+    border: 1px solid #ccc;
+
+    padding: 15px;
+
+    width: 33%;
+
+    border-radius: 5px;
+}
+
+.project h3 {
+    color: #0b2545;
+
+    margin-bottom: 10px;
+}
+
+.project p {
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.project a {
+    color: #0066cc;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.contact {
+    width: 40%;
+}
+
+form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    font-size: 15px;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    background-color: #0b2545;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    margin-right: 5px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1761b8;
+}
+
+.reset {
+    background-color: #ddd;
+
+    color: black;
+}
+
+footer {
+    background-color: #0b2545;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 20px;
+}
+</style>
+    </head>
+    <body>
+
+        <div id="header">
+
+            <div class="logo">
+
+            <h1>Nikhil Kumar</h1>
+            <p>Web Developer</p>
+
+            </div>
+
+            <div class="menu">
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Education">Education</a>
+                <a href="#Project">Project</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </div>
+
+        <div id="home">
+
+            <div class="home-text">
+
+                <h1>Hi I'm Nikhil kumar</h1>
+
+                <h2>Web Developer</h2>
+
+                <p>
+                    I am a passionate web developer with an interest in
+                    creating clean and user-friendly websites.
+                    I enjoy learning new technologies and building projects.
+                </p>
+
+                <button>Download CV</button>
+
+            </div>
+
+            <div  class="home-image">
+
+                <img src="baby.jpeg" alt="My Profile">
+
+            </div>
+
+        </div>
+
+        <div id="information">
+
+            <div class="about">
+
+                <h2>👤About Me</h2>
+
+                <p>
+                I am a quick learner and a team player.
+                I enjoy solving problems and learning new technologies.
+                My goal is to become a full stack developer.
+                </p>
+
+            </div>
+
+            <div class="skills">
+
+            <h2>💻 Skills</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+            </ul>
+
+        </div>
+
+        <div class="education">
+
+            <h2>🎓 Education</h2>
+
+            <table>
+
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institute</th>
+                    <th>Year</th>
+                </tr>
+
+                <tr>
+                    <td>B.Tech CSE</td>
+                    <td>GLA University</td>
+                    <td>2026</td>
+                </tr>
+
+                <tr>
+                    <td>12th</td>
+                    <td>SAGES School</td>
+                    <td>2022</td>
+                </tr>
+
+                <tr>
+                    <td>10th</td>
+                    <td>krishna School</td>
+                    <td>2020</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        </div>
+        <section class="bottom">
+
+            <div class="project" id="project">
+                
+                <h2>💼 Projects</h2>
+
+                <div class="project-container">
+
+                    <div class="project">
+                        <h3>1. porfolio website</h3>
+
+                        <p>A personal portfolio website built using
+                            HTML and basic CSS.
+                        </p>
+
+                        <a href="#">View project</a>
+                    </div>
+
+                    <div class="project">
+
+                        <h3>2. To-Do List App</h3>
+
+                        <p>
+                            A simple to-do list web app to add,
+                            remove and manage tasks.
+                        </p>
+
+                        <a href="#">View Project</a>
+
+                    </div>
+
+                    <div class="project">
+
+                        <h3>3. Weather App</h3>
+
+                        <p>
+                            A weather application that shows
+                            real-time weather information.
+                        </p>
+
+                        <a href="#">View Project</a>
+
+                    </div>
+
+                </div>
+
+                <div class="social">
+
+                    <h2>🔗 Connect with me</h2>
+
+                    <a href="#">LinkedIn</a>
+
+                    <a href="#">GitHub</a>
+
+                    <a href="#">Gmail</a>
+
+                </div>
+
+            </div>
+
+            <div class="contact" id="contact">
+
+                <h2>✉️ Contact Me</h2>
+
+                <form>
+
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name">
+
+
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+
+
+                    <label>Message</label>
+                    <textarea placeholder="Type your message..."></textarea>
+
+
+                    <button type="submit">Send Message</button>
+
+                    <button type="reset" class="reset">
+                        Reset
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+        
+        <footer>
+
+        <p>
+            © 2024 Aman Verma. All Rights Reserved.
+        </p>
+
+    </footer>
+    </body>
+</html>
+
