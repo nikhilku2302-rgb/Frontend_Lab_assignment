@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .form-box {
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <h1>Registration Form</h1>
+
+        <form>
+
+            <!-- Text -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+
+            <!-- Radio Buttons -->
+            <label>Gender:</label>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <br><br>
+
+            <!-- Checkboxes -->
+            <label>Skills:</label>
+
+            <input type="checkbox" id="java" name="skills" value="java">
+            <label for="java">Java</label>
+
+            <input type="checkbox" id="python" name="skills" value="python">
+            <label for="python">Python</label>
+
+            <input type="checkbox" id="web" name="skills" value="web">
+            <label for="web">Web Development</label>
+
+            <br><br>
+
+            <!-- Dropdown -->
+            <label for="course">Select Course:</label>
+
+            <select id="course" name="course">
+                <option value="">--Select--</option>
+                <option value="cse">Computer Science</option>
+                <option value="ece">Electronics</option>
+                <option value="me">Mechanical</option>
+                <option value="civil">Civil</option>
+            </select>
+
+            <br><br>
+
+            <!-- Submit -->
+            <input type="submit" value="Register">
+
+        </form>
+
+    </div>
+
+</body>
+</html>
