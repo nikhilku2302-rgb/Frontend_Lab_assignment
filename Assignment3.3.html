@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Theme Changer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .light {
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        .dark {
+            background: #202124;
+            color: white;
+        }
+
+        .blue {
+            background: #dceeff;
+            color: #10345c;
+        }
+
+        .card {
+            max-width: 420px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 12px;
+            background: #ffffffb8;
+            color: #222;
+        }
+
+        button {
+            padding: 12px 18px;
+            margin: 6px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        #lightBtn { background: #ddd; }
+        #darkBtn { background: #333; color: white; }
+        #blueBtn { background: #1677d2; color: white; }
+    </style>
+</head>
+<body class="light">
+
+    <h1>Color Theme Changer</h1>
+    <p>Choose your favourite theme.</p>
+
+    <div class="card">
+        <h2>Welcome!</h2>
+        <p>The theme of this page changes when you click a button.</p>
+    </div>
+
+    <button id="lightBtn" onclick="changeTheme('light')">
+        Light Theme
+    </button>
+
+    <button id="darkBtn" onclick="changeTheme('dark')">
+        Dark Theme
+    </button>
+
+    <button id="blueBtn" onclick="changeTheme('blue')">
+        Blue Theme
+    </button>
+
+    <p id="message" aria-live="polite">Current theme: Light</p>
+
+    <script>
+        function changeTheme(theme) {
+            document.body.className = theme;
+
+            let formattedTheme =
+                theme.charAt(0).toUpperCase() + theme.slice(1);
+
+            document.getElementById("message").textContent =
+                "Current theme: " + formattedTheme;
+        }
+    </script>
+
+</body>
+</html>
