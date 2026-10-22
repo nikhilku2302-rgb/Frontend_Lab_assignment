@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #edf2f7;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 15px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background: white;
+            width: 420px;
+            max-width: 100%;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #0002;
+            box-sizing: border-box;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 8px;
+        }
+
+        input {
+            flex: 1;
+            min-width: 0;
+            padding: 12px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            padding: 10px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #addBtn {
+            background: #1677d2;
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding: 10px;
+            background: #f2f5f9;
+            border-radius: 6px;
+        }
+
+        .task-text {
+            flex: 1;
+            overflow-wrap: anywhere;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        .delete-btn {
+            background: #e53935;
+            color: white;
+        }
+
+        #status {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My To-Do List</h1>
+
+    <div class="input-area">
+        <input type="text" id="taskInput"
+               placeholder="Enter a task"
+               aria-label="New task">
+
+        <button id="addBtn" onclick="addTask()">Add</button>
+    </div>
+
+    <p id="status" aria-live="polite">No tasks yet.</p>
+
+    <ul id="taskList"></ul>
+</div>
+
+<script>
+    function addTask() {
+        let input = document.getElementById("taskInput");
+        let task = input.value.trim();
+
+        if (task === "") {
+            document.getElementById("status").textContent =
+                "Please enter a task first.";
+            return;
+        }
+
+        // Create a new list item
+        let li = document.createElement("li");
+
+        // Create a checkbox
+        let checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.setAttribute("aria-label", "Mark task completed");
+
+        // Create the task text
+        let span = document.createElement("span");
+        span.className = "task-text";
+        span.textContent = task;
+
+        // Mark the task as completed or incomplete
+        checkbox.addEventListener("change", function() {
+            span.classList.toggle("completed", checkbox.checked);
+            updateStatus();
+        });
+
+        // Create a delete button
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.className = "delete-btn";
+
+        deleteBtn.addEventListener("click", function() {
+            li.remove();
+            updateStatus();
+        });
+
+        // Add elements to the list item
+        li.appendChild(checkbox);
+        li.appendChild(span);
+        li.appendChild(deleteBtn);
+
+        // Add the task to the webpage
+        document.getElementById("taskList").appendChild(li);
+
+        input.value = "";
+        input.focus();
+
+        updateStatus();
+    }
+
+    function updateStatus() {
+        let tasks = document.querySelectorAll("#taskList li");
+        let completed = document.querySelectorAll(
+            "#taskList input[type='checkbox']:checked"
+        ).length;
+
+        let remaining = tasks.length - completed;
+
+        document.getElementById("status").textContent =
+            tasks.length === 0
+                ? "No tasks yet."
+                : "Total: " + tasks.length +
+                  " | Completed: " + completed +
+                  " | Remaining: " + remaining;
+    }
+
+    // Allow the Enter key to add a task
+    document.getElementById("taskInput").addEventListener(
+        "keydown", function(event) {
+            if (event.key === "Enter") {
+                addTask();
+            }
+        }
+    );
+</script>
+
+</body>
+</html>
